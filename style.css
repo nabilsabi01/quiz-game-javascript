@@ -21,7 +21,7 @@ html {
     scroll-behavior: smooth;
 }
 
-main {
+.home-section {
     width: 100%;
     height: 100vh;
     background-image: url(./images/bg-home.jpg);
@@ -31,7 +31,7 @@ main {
     background-size: cover;
 }
 
-header {
+.home-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,49 +40,49 @@ header {
     border-bottom: 1.5px solid #fbc02d;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
-    padding: 0.8rem 5rem;
+    padding: 1rem 5rem;
     gap: 1rem;
     box-shadow: 1rem 0 1rem rgb(251, 192, 45, .4);
 
 }
 
-header a {
+.home-header a {
     color: var(--white);
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-a:hover {
+.home-header a:hover {
     color: #2194f3;
 }
 
-header nav ul {
+.home-header nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
 }
 
-header nav {
+.home-header nav {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2.5rem;
 }
 
-header nav ul li a {
+.home-header nav ul li a {
     color: var(--white);
     font-size: 1.3rem;
     font-weight: 400;
 }
 
-header nav ul li:hover {
+.home-header nav ul li:hover {
     color: #2194f3;
     font-size: 1.5rem;
     font-weight: 500;
 }
 
-header button {
+.btn-login {
     background-color: var(--white);
     color: #232534;
     border: none;
@@ -117,7 +117,7 @@ header button {
     text-align: center;
 }
 
-.content button {
+.content .btn-start {
     padding: 0.5rem 1rem;
     background-color: var(--white);
     border: none;
@@ -129,13 +129,14 @@ header button {
 }
 
 .content button:hover,
-header button:hover {
+.btn-login:hover {
     background: transparent;
     color: var(--white);
     outline: 2px solid var(--white);
 }
 
 .section-rules, .section-quiz{
+    padding: 2rem;
     color: var(--white);
     width: 100%;
     height: 100vh;
@@ -218,3 +219,98 @@ header button:hover {
 }
 
 /* Quiz Style */
+
+.quiz-container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: #2194f3;
+    border-radius: .8rem;
+
+}
+
+.quiz-header, .quiz-footer{
+    width: 100%;
+    background-color: #fbc02d;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: .8rem .8rem 0 0;
+}
+
+.score-box, .timer-box, .current-question{
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #232534;
+}
+
+.quiz-qestion{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.options{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+#qestion{
+    width: 100%;
+    font-size: 1.3rem;
+    background-color: #232534;
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+    font-weight: 500;
+}
+
+#option{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+    text-align: left;
+    color: #232534;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#option::after{
+    content: '💫';
+}
+#option:hover{
+    background-color: rgb(35, 37, 52, 0.2);
+    color: #fff;
+}
+
+.quiz-footer{
+    border-radius: 0 0 .8rem .8rem; 
+}
+
+#next{
+    padding: .5rem 1.5rem;
+    background-color: #2194f3;
+    border: none;
+    border-radius: .3rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+#next:hover{
+    outline: 2px solid #fff;
+    color: #232534;
+    background: transparent;
+}

@@ -9,8 +9,8 @@
 </head>
 
 <body>
-    <main>
-        <header>
+    <section class="home-section">
+        <header class="home-header">
             <a>Quiz Game</a>
             <nav>
                 <ul>
@@ -24,16 +24,69 @@
                         <a href="#contact">Contact</a>
                     </li>
                 </ul>
-                <button>Login</button>
+                <button class="btn-login">Login</button>
             </nav>
         </header>
 
         <section class="content">
             <h1>Quiz Game Java</h1>
             <p>Put your Java 11 know-how to the test with this quiz designed for confirmed and experienced Java developers. Topics: Memory management, JVM, Collections, Stream API, Date/Time API, Lambda Expressions, Local Variable Type-Inference.</p>
-            <button>Let's Start</button>
+            <button class="btn-start">Let's Start</button>
         </section>
-    </main>
+    </section>
+
+    <section class="section-rules" style="display: none;">
+        <div class="rules-container">
+          <h2 class="rules-title">Some rules to play this Quizes!</h2>
+          <div class="rules-conditions">
+            <p>1. You will have only <span class="highlight">10 seconds</span> for each question.</p>
+            <p>2. Once you select your answer, it can't be change.</p>
+            <p>3. You can't select any option once time goes off.</p>
+            <p>4. You will get points on the basis of your correct answer.</p>
+          </div>
+          <div class="condition-actions">
+            <button class="exit-rules btn">Exit Quiz</button>
+            <button class="start-quiz btn">Continue</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-quiz">
+        <div class="quiz-container">
+            <header class="quiz-header">
+                <div class="score-box">
+                    scrore : <span id="score">10%</span>
+                </div>
+                <div class="timer-box">
+                    time left : <span id="timer">10</span>
+                </div>
+            </header>
+            <section class="quiz-qestion">
+                <div id="qestion">
+                    Which of the following option leads to the portability and security
+                    of Java?
+                </div>
+                <div class="options">
+                    <div id="option">
+                        Bytecode is executed by JVM
+                    </div>
+                    <div id="option">
+                        The applet makes the Java code secure and portable
+                    </div>
+                    <div id="option">
+                        Dynamic binding between objects
+                    </div>
+                </div>
+            </section>
+            <footer class="quiz-footer">
+                <div class="current-question">
+                    <span>12</span> question of <span>20</span>
+                </div>
+                <button id="next">Next</button>
+            </footer>
+        </div>
+    </section>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
