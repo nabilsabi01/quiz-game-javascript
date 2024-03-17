@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz Game Online App</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <title>QuizJava | Train your brain with our quizes!</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header Section -->
+      <header>
+        <div class="container">
+          <div class="header-content">
+            <a href="#" class="logo">
+              Quiz<span class="highlight">JAVA</span></a>
+          </div>
+        </div>
+      </header>
 
-<body>
-    <section class="home-section">
-        <header class="home-header">
-            <a>Quiz Game</a>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#home">Home</a>
-                    </li>
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-                <button class="btn-login">Login</button>
-            </nav>
-        </header>
+      <!-- Banner Section -->
+      <section class="banner">
+        <div class="banner-left">
+          <h2 class="banner-title">
+            Put your knowledge to the test with our brain-busting
+            <span class="highlight"> Java </span>quizzes!
+          </h2>
+          <p class="banner-description">
+            Our quizzes are designed to challenge even the most knowledgeable
+            individuals. From easy to hard, we've got something for everyone.
+            Our quizzes are not only fun but also informative.
+          </p>
+          <button id="condition-rules-btn"> Start Quiz</button>
+        </div>
+      </section>
 
-        <section class="content">
-            <h1>Quiz Game Java</h1>
-            <p>Put your Java 11 know-how to the test with this quiz designed for confirmed and experienced Java developers. Topics: Memory management, JVM, Collections, Stream API, Date/Time API, Lambda Expressions, Local Variable Type-Inference.</p>
-            <button class="btn-start">Let's Start</button>
-        </section>
-    </section>
-
-    <section class="section-rules" style="display: none;">
-        <div class="rules-container">
+      <!-- Rules Condtion Section -->
+      <section class="quiz-rules-container">
+        <div class="quiz-rules-condition glass">
           <h2 class="rules-title">Some rules to play this Quizes!</h2>
           <div class="rules-conditions">
-            <p>1. You will have only <span class="highlight">10 seconds</span> for each question.</p>
+            <p>
+              1. You will have only
+              <span class="highlight">10 seconds</span> for each question.
+            </p>
             <p>2. Once you select your answer, it can't be change.</p>
             <p>3. You can't select any option once time goes off.</p>
             <p>4. You will get points on the basis of your correct answer.</p>
@@ -51,42 +56,71 @@
         </div>
       </section>
 
-      <section class="section-quiz">
-        <div class="quiz-container">
-            <header class="quiz-header">
-                <div class="score-box">
-                    scrore : <span id="score">10%</span>
-                </div>
-                <div class="timer-box">
-                    time left : <span id="timer">10</span>
-                </div>
-            </header>
-            <section class="quiz-qestion">
-                <div id="qestion">
-                    Which of the following option leads to the portability and security
-                    of Java?
-                </div>
-                <div class="options">
-                    <div id="option">
-                        Bytecode is executed by JVM
-                    </div>
-                    <div id="option">
-                        The applet makes the Java code secure and portable
-                    </div>
-                    <div id="option">
-                        Dynamic binding between objects
-                    </div>
-                </div>
-            </section>
-            <footer class="quiz-footer">
-                <div class="current-question">
-                    <span>12</span> question of <span>20</span>
-                </div>
-                <button id="next">Next</button>
-            </footer>
-        </div>
-    </section>
-    <script src="./js/script.js"></script>
-</body>
+      <!-- Question Section -->
+      <section class="question-section">
+        <div class="question-container glass">
+          <div class="question-header">
+            <div class="time-container">
+              <div class="time">
+                <span class="time-count"> 10</span> seconds Left
+              </div>
+            </div>
+            <div class="user-score">
+              <p><span class="score"> 10</span> points</p>
+            </div>
+          </div>
+          <div class="timeline"></div>
+          <div class="question-center">
+            <h2 class="question-text"></h2>
+            <div class="question-options"></div>
+            <div class="answer-description"></div>
+          </div>
 
+          <div class="question-footer">
+            <div class="question-left">
+              <div class="question-progress-container">
+                <div class="question-progress"></div>
+              </div>
+              <div class="question-progress-text"></div>
+            </div>
+            <div class="question-action">
+              <button class="next-question btn">Next Question</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Result Section -->
+      <section class="result-section">
+        <div class="result-box glass">
+          <h2 class="result-expression">Congratulations!!!!</h2>
+          <p class="result-text">You Scored 60 Points</p>
+          <div class="result-actions">
+            <button class="restart btn">Restart Quiz</button>
+            <button class="back-to-home btn">Back to Home</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- loading section -->
+      <section class="loading-container">
+        <h2 class="loading-text">Loading...</h2>
+        <div class="loading-line-box">
+          <div class="line"></div>
+        </div>
+      </section>
+
+      <!-- Container end -->
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <p class="copyright">Copyright &copy;2024 Reserved</p>
+    </footer>
+
+    <!-- JS Files -->
+    <script src="./js/quiz.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="https://kit.fontawesome.com/8184740b0e.js" crossorigin="anonymous"></script>
+  </body>
 </html>
